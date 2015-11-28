@@ -43,9 +43,16 @@ exec { "/usr/bin/npm install -g yo":
   require   => Package [ "npm" ]
 }
 
-exec { "/usr/bin/npm install -g generator-angular":
+exec { "/usr/bin/npm install -g grunt-cli":
   user      => "root",
   logoutput => "on_failure",
-  creates   => "/usr/local/lib/node_modules/generator-angular",
-  require   => Exec [ "/usr/bin/npm install -g yo" ]
+  creates   => "/usr/bin/grunt",
+  require   => Package [ "npm" ]
+}
+
+exec { "/usr/bin/npm install -g browser-sync":
+  user      => "root",
+  logoutput => "on_failure",
+  creates   => "/usr/bin/browser-sync",
+  require   => Package [ "npm" ]
 }
