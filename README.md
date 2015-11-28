@@ -4,5 +4,4 @@ I am building a trello clone from scratch, just based on the app in http://www.a
 
 Using technologies:
 
-- Browsersync
-- Gulp
+- Grunt
