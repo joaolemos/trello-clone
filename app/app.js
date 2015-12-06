@@ -15,19 +15,17 @@ angular
       'ngResource',
       'ngRoute',
       'ngSanitize',
-      'ngTouch'
+      'ngTouch',
+      'trelloCloneApp.common',
+      'trelloCloneApp.storyboard'
     ])
     .config(function ($routeProvider) {
       $routeProvider
           .when('/', {
-            templateUrl: 'views/main.html',
-            controller: 'MainCtrl',
-            controllerAs: 'main'
-          })
-          .when('/about', {
-            templateUrl: 'views/about.html',
-            controller: 'AboutCtrl',
-            controllerAs: 'about'
+            templateUrl: 'storyboard/views/storyboard.html',
+            controller: 'StoryboardCtrl',
+            controllerAs: 'storyboard',
+            requiresLogin: true
           })
           .otherwise({
             redirectTo: '/'
