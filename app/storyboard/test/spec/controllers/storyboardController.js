@@ -18,6 +18,6 @@ describe('Controller: StoryboardCtrl', function () {
     }));
 
     it('should attach the hello message to the scope', function () {
-        expect(StoryboardCtrl.$scope.helloStoryboard.length).toBe(17);
+        expect(scope.helloStoryboard.length).toBe(17);
     });
 });
