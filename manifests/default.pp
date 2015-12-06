@@ -50,6 +50,13 @@ exec { "/usr/bin/npm install -g grunt-cli":
   require   => Package [ "npm" ]
 }
 
+exec { "/usr/bin/npm install -g bower":
+  user      => "root",
+  logoutput => "on_failure",
+  creates   => "/usr/bin/bower",
+  require   => Package [ "npm" ]
+}
+
 exec { "/usr/bin/npm install -g browser-sync":
   user      => "root",
   logoutput => "on_failure",
